@@ -90,6 +90,13 @@ public class DeliveryDriver : MonoBehaviour
             }
             ChangeBattery(-Time.deltaTime * 3.0f);      // 이동할때마다 배터리 소모 
         }
+        else
+        {
+            if (isMoving)
+            {
+                StopMoving();
+            }
+        }
     }
 
     void ChangeBattery(float amount)
