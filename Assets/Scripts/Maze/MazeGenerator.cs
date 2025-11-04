@@ -22,6 +22,14 @@ public class MazeGenerator : MonoBehaviour
     private MazeCell[,] maze;
     private Stack<MazeCell> cellStack;          // DFS를 위한 스택
 
+    public void Awake()
+    {
+        if (i == null)
+        {
+            i = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
